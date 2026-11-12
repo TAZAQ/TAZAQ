@@ -1,29 +1,27 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Vladislav Chesnov, product engineer at Medods. A git graph of commits from August 2020 to November 2026: one long Medods line that spikes in 2026, with side projects branching off late." src="assets/hero-light.svg" width="100%">
+  <img alt="Vladislav Chesnov, product engineer at Medods. Commit history from 2019 through 12 November 2026: my private Medods contributions combined into one line, alongside personal projects. No matching commits in 2019." src="assets/hero-light.svg" width="100%">
 </picture>
 
-Six years inside one clinic-management SaaS, from Slim templates to Vue 3 and TypeScript.
-Since 2026 I build with coding agents, and build the tooling that keeps them honest.
+Product engineer at Medods. I build interfaces, developer tools and agent workflows.
+Vue, TypeScript, Ruby — and, since 2026, coding agents.
 
 <table>
   <tr>
-    <td align="center"><h3>4,738</h3>commits</td>
-    <td align="center"><h3>958</h3>PRs merged</td>
-    <td align="center"><h3>1,459</h3>PRs reviewed</td>
-    <td align="center"><h3>994</h3>active days</td>
+    <td align="center"><h3>4,885</h3>authored commits</td>
+    <td align="center"><h3>985</h3>authored PRs merged</td>
+    <td align="center"><h3>1,460</h3>others' PRs reviewed</td>
+    <td align="center"><h3>1,021</h3>active commit days</td>
   </tr>
 </table>
 
-Mostly private work, August 2020 to November 2026. [How this is counted](#how-this-is-counted).
+Mostly private work. Updated **12 November 2026**; searched from January 2019. [How this is counted](#how-this-is-counted).
 
 ## Highlights
 
 | Result | Proof |
 | --- | --- |
-| Drove the Medods frontend from Vue 2.7 to Vue 3.5 | 305 of 374 migration commits, March to June 2026 |
-| Made tests part of the daily loop | Commits touching tests: 4 in 2020–2023, 476 in 2026 |
-| Built an AI pull request reviewer for the team: n8n handles GitHub, an agent reviews against versioned JSON contracts | 65 of 75 commits, since May 2026 |
+| Built developer tooling around coding agents | [Docker and Compose inside Orca](https://github.com/TAZAQ/orca-docker-plugin), with crash notifications |
 | Fixed a race in Quackback's widget SDK: queued calls lost their handler argument | [quackback#113](https://github.com/QuackbackIO/quackback/pull/113) |
 
 ## Projects
@@ -41,21 +39,21 @@ Open source: 5 merged PRs in [Quackback](https://github.com/QuackbackIO/quackbac
 
 ## How the stack moved
 
-TypeScript went from nothing in 2021 to half of my code commits. Slim went from half to 5%.
-Rust (6%) and Python (5%) grew with the agent tooling in 2026.
+TypeScript went from no recorded code commits in 2021 to 53% in 2026. Slim fell from 41% in 2020 to 5%.
+Rust (6%) and Python (1%) are also part of my 2026 mix.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-  <img alt="Line chart: share of code commits touching each language, 2020 to 2026. TypeScript rises from 0 to 50 percent, Vue holds around 50 to 60 after 2020, Slim falls from 49 to 5 percent." src="assets/stack-light.svg" width="100%">
+  <img alt="Line chart: share of tracked code commits touching each language, 2020 to 2026. TypeScript rises from 0 to 53 percent; Vue reaches 50 percent; Slim falls from 41 to 5 percent." src="assets/stack-light.svg" width="100%">
 </picture>
 
 ## When I commit
 
-96% of commits land on weekdays. The busiest hour is Monday 17:00.
+96% of commits land on weekdays. The busiest weekday/hour slot is Tuesday 15:00–15:59 (UTC+05:00).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rhythm-dark.svg">
-  <img alt="Heatmap of commits by weekday and hour. Activity concentrates on weekdays from 12:00 to 20:00 and peaks on Monday at 17:00 with 117 commits." src="assets/rhythm-light.svg" width="100%">
+  <img alt="Heatmap of my commits by weekday and hour, UTC+05:00. Activity is concentrated on weekdays, with a peak of 127 commits in the Tuesday 15:00 hour." src="assets/rhythm-light.svg" width="100%">
 </picture>
 
 ## How I work
@@ -72,20 +70,23 @@ Rust (6%) and Python (5%) grew with the agent tooling in 2026.
 <details>
 <summary>Method and the numbers behind the charts</summary>
 
-- Commits: all branches of 19 repositories, merges excluded. Copies from rebases and cherry-picks are collapsed by author date and subject.
-- PRs: GitHub search across the Medods organization.
-- Private repositories are counted, not linked.
-- The history starts in August 2020 and stops on 3 November 2026, so both end years are partial.
-- A commit can touch several languages, so the shares below do not add up to 100%.
+- Period requested: 1 January 2019 through the collection timestamp below. No matching commits were found in 2019; the available authored history starts in August 2020.
+- Commits: my verified author email addresses only, across 31 repositories' fetched branches and available local history; merge commits excluded. Copies from rebases, cherry-picks and forks are collapsed by author timestamp and subject. This heuristic can collapse distinct commits with the same timestamp and subject; it is not GitHub's contribution-calendar metric.
+- PRs: GitHub search across accessible repositories for my authored PRs merged from 1 January 2019 through 12 November 2026, and distinct PRs by other authors created in that interval that I reviewed. These are PR counts, not my merge actions or review-event counts; review dates themselves are not filtered.
+- Medods is private. My contributions are aggregated across its repositories; internal names, links, commit messages, task details and other people's work are not published.
+- Language shares use commits touching the tracked code extensions as the denominator, not lines of code. One commit can touch several languages, so shares do not add up to 100%.
+- Collected at **12 November 2026, 10:47 UTC**. Latest included author date: **12 November 2026**. Commit days and hours use **UTC+05:00**. Both 2020 and 2026 are partial years.
+- An unavailable public fork was checked through the GitHub API: its only branch contained no commits matching my author addresses, so it adds nothing to these totals.
 
 | Year | Commits | Vue | TypeScript | JavaScript | Sass/SCSS | Slim | Ruby |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2020 | 268 | 35% | 0% | 25% | 53% | 49% | 15% |
-| 2021 | 594 | 55% | 0% | 35% | 24% | 22% | 4% |
-| 2022 | 518 | 52% | 3% | 62% | 22% | 22% | 14% |
-| 2023 | 523 | 49% | 9% | 66% | 27% | 20% | 13% |
-| 2024 | 662 | 62% | 24% | 52% | 27% | 13% | 16% |
-| 2025 | 673 | 58% | 51% | 35% | 20% | 12% | 13% |
-| 2026 | 1,500 | 52% | 50% | 19% | 22% | 5% | 10% |
+| 2019 | 0 | — | — | — | — | — | — |
+| 2020 | 321 | 40% | 0% | 28% | 47% | 41% | 13% |
+| 2021 | 670 | 55% | 0% | 38% | 22% | 20% | 4% |
+| 2022 | 527 | 51% | 3% | 63% | 22% | 21% | 14% |
+| 2023 | 525 | 49% | 9% | 66% | 26% | 20% | 13% |
+| 2024 | 677 | 62% | 23% | 52% | 26% | 13% | 16% |
+| 2025 | 694 | 58% | 49% | 36% | 20% | 11% | 13% |
+| 2026 | 1,471 | 50% | 53% | 21% | 19% | 5% | 12% |
 
 </details>
